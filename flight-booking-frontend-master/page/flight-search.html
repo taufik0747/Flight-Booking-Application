@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="page/flight-search.css">
+<div class="row g-0">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6">
+        <div class="card flight-search-card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Check availability for direction</h5>
+                <hr />
+                <div id="errorMessage" class="text-danger fw-bold mb-3"> </div>
+                <form id="flightSearchForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="from" class="form-label">From</label>
+                                <input type="text" class="form-control" list="cityList" id="from" name="from">
+                                <datalist id="cityList"> </datalist>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="to" class="form-label">To</label>
+                                <input type="text" class="form-control" list="cityList" id="to" name="to">
+                                <datalist id="cityList"> </datalist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="journeyDate" class="form-label">Journey date</label>
+                                <input type="text" class="form-control" id="journeyDate" name="journeyDate">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="returnDate" class="form-label">Return date</label>
+                                <input type="text" class="form-control" id="returnDate" name="returnDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="journeyType" id="journeyType" value="oneway">
+                                    <label class="form-check-label" for="oneWay">One way</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="journeyType" id="journeyType" value="roundtrip">
+                                    <label class="form-check-label" for="roundTrip">Round trip</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary d-flex float-end">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="selectedFlights"></div>
+<div id="flightResult"></div>
+<script src="page/flight-search.js"></script>

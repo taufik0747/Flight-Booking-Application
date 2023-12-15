@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="page/pnr-details.css">
+<div class="container">
+    <div class="card pnr-details-card">
+        <div class="card-body">
+            <div class="row my-1">
+                <div class="col">
+                    <h5 class="text-center">
+                        <b>PNR: </b>
+                        <span id="pnr"></span>
+                    </h5>
+                </div>
+            </div>
+            <div class="row my-1 mb-4">
+                <div class="col">
+                    <div>
+                        <b>Total price: </b>
+                        <span id="totalPnrPrice"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-1">
+                <div class="col">
+                    <b>Roasters</b>
+                </div>
+            </div>
+            <table class="table table-sm mb-4">
+                <thead>
+                    <tr>
+                        <th scope="col">Airline Name</th>
+                        <th scope="col">Flight Number</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Depurture</th>
+                        <th scope="col">Arrival</th>
+                        <th scope="col">Booking Status</th>
+                        <th scope="col">Flight Status</th>
+                        <th scope="col">Booking Price</th>
+                    </tr>
+                </thead>
+                <tbody id="roasterRows"> </tbody>
+            </table>
+            <div class="row my-1">
+                <div class="col">
+                    <b>Tickets</b>
+                </div>
+            </div>
+            <table class="table table-sm mb-4">
+                <thead>
+                    <tr>
+                        <th scope="col">Ticket</th>
+                        <th scope="col">Roaster</th>
+                        <th scope="col">Flight</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Identity Type</th>
+                        <th scope="col">Seat Type</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ticketRows"> </tbody>
+            </table>
+            <div class="row my-1">
+                <div class="col">
+                    <div>
+                        Booking user:
+                        <span id="bookingUserName">Admin (admin@flight.com)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ticketDetailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ticketDetailsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ticket details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-3">
+                <div id="ticketDetails">
+                    <div class="card border border-dark">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-7">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-3">Ticket</td>
+                                                <td class="col-auto" id="ticketModalTicket"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>PNR</td>
+                                                <td class="fw-bold" id="ticketModalpnr"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flight</td>
+                                                <td class="fw-bold" id="ticketModalFlight"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airline</td>
+                                                <td id="ticketModalAirline"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>From</td>
+                                                <td id="ticketModalJourneyFrom"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>To</td>
+                                                <td id="ticketModalJourneyTo"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Date</td>
+                                                <td id="ticketModalJourneyDate"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Depurture</td>
+                                                <td id="ticketModalDeparture"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Arrival</td>
+                                                <td id="ticketModalArrival"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flight Status</td>
+                                                <td id="ticketModalRoasterStatus"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ticket Status</td>
+                                                <td id="ticketModalTicketStatus"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ticket Price</td>
+                                                <td id="ticketModalticketPrice"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-5">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-4">Name</td>
+                                                <td class="cole-auto" id="ticketModalpName"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Age</td>
+                                                <td id="ticketModalpAge"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Contact</td>
+                                                <td id="ticketModalpConatct"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Identity Type</td>
+                                                <td id="ticketModalpIdentityType"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seat Type</td>
+                                                <td id="ticketModalpSeatType"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="page/pnr-details.js"></script>

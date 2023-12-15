@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="page/flight-result.css">
+<div class="card flight-result-card">
+    <div class="card-body">
+        <div id="selectedFlights"></div>
+        <div id="activeSearchCriteria"></div>
+        <div id="searchResult"></div>
+        <div id="actionButtons" class="d-grid gap-2 mt-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button" id="searchButton" onclick="backToSearch()">Back to search</button>
+            <button class="btn btn-primary" type="button" id="nextTripButton" onclick="nextSearch()">Next trip</button>
+            <button class="btn btn-primary" type="button" id="bookButton" onclick="bookTrips()">Book</button>
+        </div>
+    </div>
+</div>
+<script src="page/flight-result.js"></script>

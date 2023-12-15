@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="page/roaster.css">
+<div class="card my-3 mx-auto shadow" style="width:90%">
+    <div class="card-body">
+        <form onsubmit="searchRoaster(event)">
+            <div class="row g-3">
+                <div class="col-auto">
+                    <label for="roasterDate" class="form-label">Roaster date</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="roasterDate" name="roasterDate" placeholder="dd/MM/yyyy">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="allRoasters" class="mb-3"> </div>
+<script src="page/roaster.js"></script>

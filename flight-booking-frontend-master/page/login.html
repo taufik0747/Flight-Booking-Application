@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="page/login.css">
+<div class="card login-card d-flex m-auto shadow">
+    <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        <hr />
+        <div id="errorMessage" class="text-danger fw-bold mb-3"> </div>
+        <form id="loginForm">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="userId" class="form-label">Email id</label>
+                        <input type="email" class="form-control" id="userId" name="userId">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="admin" id="loginAsAdmin" name="loginAsAdmin">
+                        <label class="form-check-label" for="loginAs">
+                            Login as admin
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-grid">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col mb-3">
+                    New user
+                    <a href="#" class="text-decoration-none" onclick="gotoRegister()">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="page/login.js"></script>

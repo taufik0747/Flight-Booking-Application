@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="page/admin.css">
+<div class="container">
+    <div class="card admin-page-card shadow">
+        <div class="card-body p-0">
+            <ul class="nav nav-pills nav-fill" id="adminTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="airline-tab" data-bs-toggle="tab" href="#airline" role="tab" aria-controls="airline" aria-selected="true">Manage airlines</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="flight-tab" data-bs-toggle="tab" href="#flight" role="tab" aria-controls="flight" aria-selected="false">Manage flights</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="roaster-tab" data-bs-toggle="tab" href="#roaster" role="tab" aria-controls="roaster" aria-selected="false">Manage roasters</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="coupon-tab" data-bs-toggle="tab" href="#coupon" role="tab" aria-controls="coupon" aria-selected="false">Manage coupons</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="adminTabContent">
+                <div class="tab-pane fade show active" id="airline" role="tabpanel" aria-labelledby="airline-tab">
+                    <div id="manageAirlines"></div>
+                </div>
+                <div class="tab-pane fade" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                    <div id="manageFlights"></div>
+                </div>
+                <div class="tab-pane fade" id="roaster" role="tabpanel" aria-labelledby="roaster-tab">
+                    <div id="manageRoaster"></div>
+                </div>
+                <div class="tab-pane fade" id="coupon" role="tabpanel" aria-labelledby="coupon-tab">
+                    <div id="manageCoupons"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="page/admin.js"></script>

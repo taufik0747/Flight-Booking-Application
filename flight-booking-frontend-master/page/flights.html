@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="page/flights.css">
+<div class="row my-3">
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-sm mx-3 d-flex float-end" data-bs-toggle="modal" data-bs-target="#addFlight">
+            Add new flight
+        </button>
+    </div>
+</div>
+<div id="allFlights"> </div>
+<div class="modal fade" id="addFlight" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addFlightLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body m-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="modal-title" id="addFlightLabel">Add flight</h5>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn-close d-flex float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <hr />
+                <div id="flightAddErrorMessage" class="text-danger fw-bold mb-3"> </div>
+                <div id="flightAddSuccessMessage" class="text-success fw-bold mb-3"> </div>
+                <form id="flightAddForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="airline" class="form-label">Airline</label>
+                                <input type="text" class="form-control" list="airlineList" id="airline" name="airline">
+                                <datalist id="airlineList"> </datalist>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="flightNumber" class="form-label">Flight number</label>
+                                <input type="text" class="form-control" id="flightNumber" name="flightNumber">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="instrument" class="form-label">Instrument</label>
+                                <input type="text" class="form-control" id="instrument" name="instrument">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="from" class="form-label">From</label>
+                                <input type="text" class="form-control" list="cityList" id="from" name="from">
+                                <datalist id="cityList"> </datalist>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="to" class="form-label">To</label>
+                                <input type="text" class="form-control" list="cityList" id="to" name="to">
+                                <datalist id="cityList"> </datalist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="startTime" class="form-label">Start time</label>
+                                <div class="input-group">
+                                    <input type="text" aria-label="Start time hour" class="form-control" id="startTimeHour" name="startTimeHour" placeholder="hh">
+                                    <input type="text" aria-label="Start time minute" class="form-control" id="startTimeMinute" name="startTimeMinute" placeholder="mm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="startTime" class="form-label">End time</label>
+                                <div class="input-group">
+                                    <input type="text" aria-label="End time hour" class="form-control" id="endTimeHour" name="endTimeHour" placeholder="hh">
+                                    <input type="text" aria-label="End time minute" class="form-control" id="endTimeMinute" name="endTimeMinute" placeholder="mm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="startTime" class="form-label">Duration</label>
+                                <div class="input-group">
+                                    <input type="text" aria-label="Duration hour" class="form-control" id="durationHour" name="durationHour" placeholder="hh">
+                                    <input type="text" aria-label="Duration minute" class="form-control" id="durationMinute" name="durationMinute" placeholder="mm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="sunday" value="sunday">
+                                    <label class="form-check-label" for="sunday">Sunday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="monday" value="monday">
+                                    <label class="form-check-label" for="monday">Monday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="tuesday" value="tuesday">
+                                    <label class="form-check-label" for="tuesday">Tuesday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="wednesday" value="wednesday">
+                                    <label class="form-check-label" for="wednesday">Wednesday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="thursday" value="thursday">
+                                    <label class="form-check-label" for="thursday">Thursday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="friday" value="friday">
+                                    <label class="form-check-label" for="friday">Friday</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="saturday" value="saturday">
+                                    <label class="form-check-label" for="saturday">Saturday</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="businessClassSeatCount" class="form-label">Business class seat</label>
+                                <input type="text" class="form-control" id="businessClassSeatCount" name="businessClassSeatCount">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="businessClassSeatPrice" class="form-label">Business class seat price</label>
+                                <input type="text" class="form-control" id="businessClassSeatPrice" name="businessClassSeatPrice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="nonBusinessClassSeatCount" class="form-label">Non business class seat</label>
+                                <input type="text" class="form-control" id="nonBusinessClassSeatCount" name="nonBusinessClassSeatCount">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="nonBusinessClassSeatPrice" class="form-label">Non business class seat price</label>
+                                <input type="text" class="form-control" id="nonBusinessClassSeatPrice" name="nonBusinessClassSeatPrice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="rowCount" class="form-label">Row count</label>
+                                <input type="text" class="form-control" id="rowCount" name="rowCount">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="columnCount" class="form-label">Column count</label>
+                                <input type="text" class="form-control" id="columnCount" name="columnCount">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3" id="mealRadioContainers">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary d-flex float-end">Add flight</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="page/flights.js"></script>

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="page/register.css">
+<div class="card register-card d-flex m-auto shadow">
+    <div class="card-body">
+        <h5 class="card-title">Register</h5>
+        <hr />
+        <div id="errorMessage" class="text-danger fw-bold mb-3"> </div>
+        <form id="registerForm">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email id</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="contact" class="form-label">Contact</label>
+                        <input type="text" class="form-control" id="contact" name="contact">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-grid">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col mb-3">
+                    Already user
+                    <a href="#" class="text-decoration-none" onclick="gotoLogin()">Login</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="page/register.js"></script>

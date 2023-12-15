@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="page/booking.css">
+<div class="card booking-card">
+    <div id="bookingError" class="text-danger fw-bold"> </div>
+    <div class="card-body">
+        <div class="card">
+            <div class="card-body">
+                <h5>Selected flights</h5>
+                <div id="selectedFlights"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form onsubmit="applyCoupon(event)">
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <label for="coupon" class="form-label">Coupon</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="coupon" name="coupon" placeholder="coupon name">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3">Apply</button>
+                        </div>
+                        <div class="col-auto">
+                            <div id="copunApplyStatusSuccess" class="text-success fw-bold"> </div>
+                            <div id="copunApplyStatusError" class="text-danger fw-bold"> </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div id="passengerNotAddedMessage" class="text-danger fw-bold"></div>
+                <div class="row g-3">
+                    <div class="col-auto">
+                        <label for="coupon" class="form-label">Number of passengers</label>
+                    </div>
+                    <div class="col-2">
+                        <select class="form-select form-select-sm" aria-label="Number of passengers" id="passengerCount" onchange="getPassengerForm(event)">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-3">
+                        <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="col-1">
+                        <label for="age" class="form-label">Age</label>
+                    </div>
+                    <div class="col-2">
+                        <label for="phone" class="form-label">Phone</label>
+                    </div>
+                    <div class="col-2">
+                        <label for="securityType" class="form-label">Security Type</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="securityNumber" class="form-label">Security Number</label>
+                    </div>
+                </div>
+                <div id="passengerFormDiv"> </div>
+            </div>
+        </div>
+        <div id="actionButtons" class="d-grid gap-2 mt-3 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary" type="button" id="bookButton" onclick="bookTrips()">Confirm booking</button>
+        </div>
+    </div>
+</div>
+<script src="page/booking.js"></script>

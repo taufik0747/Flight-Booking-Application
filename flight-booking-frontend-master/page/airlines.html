@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="page/airlines.css">
+<div class="row my-3">
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-sm mx-3 d-flex float-end" data-bs-toggle="modal" data-bs-target="#addAirline">
+            Add new airline
+        </button>
+    </div>
+</div>
+<div id="allAirlines"> </div>
+<div class="modal fade" id="addAirline" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addAirlineLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body m-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="modal-title" id="addAirlineLabel">Add airline</h5>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn-close d-flex float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <hr />
+                <div id="airlineAddErrorMessage" class="text-danger fw-bold mb-3"> </div>
+                <div id="airlineAddSuccessMessage" class="text-success fw-bold mb-3"> </div>
+                <form id="airlineAddForm" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="logo" class="form-label">Logo</label>
+                                <input type="file" class="form-control" id="file" name="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="contact" class="form-label">Contact</label>
+                                <input type="text" class="form-control" id="contact" name="contact">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea class="form-control" id="address" name="address"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary d-flex float-end">Add airline</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="page/airlines.js"></script>
